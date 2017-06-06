@@ -23,7 +23,7 @@
   "homepage": "https://github.com/finom/opensource.gubanov.eu#readme",
   "config": {
     "deployToGit": {
-      "repository": "git@github.com:finom/opensource.gubanov.eu.git",
+      "repository": "https://$GH_TOKEN@github.com/finom/opensource.gubanov.eu.git",
       "branch": "gh-pages",
       "folder": "dist",
       "script": "npm run build",
