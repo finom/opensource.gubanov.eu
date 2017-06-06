@@ -1,10 +1,10 @@
-const CopyWebpackPlugin = require( 'copy-webpack-plugin');
-const OpenBrowserPlugin = require(  'open-browser-webpack-plugin');
-const HtmlWebpackPlugin = require(  'html-webpack-plugin');
-const BabiliPlugin = require(  'babili-webpack-plugin');
-const ExtractTextPlugin = require(  'extract-text-webpack-plugin');
-const { argv } = require(  'optimist');
-const path = require(  'path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BabiliPlugin = require('babili-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { argv } = require('optimist');
+const path = require('path');
 
 const { NODE_ENV } = process.env;
 const entry = {
@@ -13,11 +13,11 @@ const entry = {
 
 const plugins = [
     new HtmlWebpackPlugin({
-        template: 'html/index.js',
+        template: 'html/index.js'
     }),
     new ExtractTextPlugin({
-        filename: 'css/style.css',
-    }),
+        filename: 'css/style.css'
+    })
 ];
 
 if (NODE_ENV === 'development') {
@@ -47,7 +47,7 @@ entry.app.push(
 );
 
 plugins.push(new CopyWebpackPlugin([
-    { from: 'static', to: '.' },
+    { from: 'static', to: '.' }
 ]));
 
 if (NODE_ENV === 'production') {
@@ -68,7 +68,7 @@ module.exports = {
     module: {
         rules: [{
             test: /.js?$/,
-            use: ['babel-loader'],
+            use: ['babel-loader']
         }, {
             test: /\.css$/,
             use: ExtractTextPlugin.extract({
