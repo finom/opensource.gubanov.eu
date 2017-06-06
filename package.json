@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint || echo 'Errored'",
+    "test": "echo 'No test yet'",
     "lint": "eslint . --ext .js --ignore-pattern '**/node_modules/**' --ignore-pattern '**/dist/**'",
     "upgrade": "ncu -a && npm install",
     "build": "rimraf dist; NODE_ENV=production webpack",
