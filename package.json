@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint || echo 'Errored'",
     "lint": "eslint . --ext .js --ignore-pattern '**/node_modules/**' --ignore-pattern '**/dist/**'",
     "upgrade": "ncu -a && npm install",
-    "bundle": "rimraf dist; NODE_ENV=production webpack",
-    "develop": "NODE_ENV=development webpack-dev-server --port 8111"
+    "build": "rimraf dist; NODE_ENV=production webpack",
+    "develop": "NODE_ENV=development webpack-dev-server --port 8111",
+    "deploy": "deploy-to-git"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,19 @@
     "url": "https://github.com/finom/opensource.gubanov.eu/issues"
   },
   "homepage": "https://github.com/finom/opensource.gubanov.eu#readme",
+  "config": {
+    "deployToGit": {
+      "repository": "https://$GH_TOKEN@github.com/finom/opensource.gubanov.eu.git",
+      "branch": "gh-pages",
+      "folder": "dist",
+      "script": "npm run build",
+      "commit": "$npm_package_version",
+      "user": {
+        "email": "andrey.a.gubanov@gmail.com",
+        "name": "Andrey Gubanov (his digital clone)"
+      }
+    }
+  },
   "devDependencies": {
     "babel-loader": "^7.0.0",
     "babel-polyfill": "^6.23.0",
@@ -35,6 +49,7 @@
     "optimist": "^0.6.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
