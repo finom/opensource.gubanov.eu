@@ -7,9 +7,9 @@
     "test": "npm run lint",
     "lint": "eslint . --ext .js --ignore-pattern '**/node_modules/**' --ignore-pattern '**/dist/**'",
     "upgrade": "ncu -a && npm install",
-    "build": "rimraf dist; NODE_ENV=production webpack",
+    "build": "NODE_ENV=production webpack",
     "develop": "NODE_ENV=development webpack-dev-server --port 8111",
-    "deploy": "deploy-to-git"
+    "deploy": "rimraf dist; deploy-to-git"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/finom/opensource.gubanov.eu#readme",
   "config": {
     "deployToGit": {
-      "repository": "https://$GH_TOKEN@github.com/finom/opensource.gubanov.eu.git",
+      "repository": "git@github.com:finom/opensource.gubanov.eu.git",
       "branch": "gh-pages",
       "folder": "dist",
       "script": "npm run build",
