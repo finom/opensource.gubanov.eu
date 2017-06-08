@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root, body {
     font-size: 16px;
 }
@@ -39,6 +45,26 @@ a:hover {
     border-radius: 3px;
     color: #586069;
     margin-bottom: 1rem;
+    width: 48%;
+    float: left;
+}
+
+.tile:nth-child(1n) {
+    margin-right: 2%;
+    margin-left: 0;
+}
+
+.tile:nth-child(2n) {
+    margin-left: 2%;
+    margin-right: 0;
+}
+
+@media (max-width: 550px) {
+    .tile:nth-child(1n), .tile:nth-child(2n) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 
 .links .github {
@@ -59,7 +85,7 @@ a:hover {
 .description {
     font-size: 0.9rem;
     margin: 0.5rem 0;
-    min-height: calc(2 * 1.6 * 1rem)
+    min-height: calc(3 * 1.6 * 1rem)
 }
 
 .tags {
@@ -82,6 +108,10 @@ a:hover {
 
 .tag.cli::before {
     background: #178600;
+}
+
+.tag.ci::before {
+    background: #701516;
 }
 
 .tag.node::before {

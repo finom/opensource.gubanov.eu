@@ -15,17 +15,16 @@ const Index = () => (
         <body>
             <IconDefs />
             <div className="container">
-                <h1 className="twelve columns">Open Source Projects made by Andrey Gubanov</h1>
-                <p>This page contains my open source portfolio. Blah blah lorem ipsum.</p>
+                <h1 className="twelve columns">Open Source Projects made by Andrey Gubanov (the page is under development yet)</h1>
                 <div className="row">
                     {data.general.map(({ name, description, npm, tags }) => (
                         <Tile {...{ name, description, npm, tags, owner: 'finom' }} />
                     ))}
                 </div>
-                <h2 className="twelve columns">Open Source Projects made by Andrey Gubanov</h2>
-                <p>This page contains my open source portfolio. Blah blah lorem ipsum.</p>
+                <h2 className="twelve columns">Matreshka.js</h2>
+                <p>Matreshka.js is one big project with long history. This is the first (or at least one of the first) famous JavaScript framework made by somebody from exUSSR.</p>
                 <div className="row">
-                    {data.general.map(({ name, description, npm, tags }) => (
+                    {data.matreshka.map(({ name, description, npm, tags }) => (
                         <Tile {...{ name, description, npm, tags, owner: 'finom' }} />
                     ))}
                 </div>

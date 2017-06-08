@@ -7,7 +7,7 @@ export default ({
     tags,
     owner
 }) => (
-    <div className="tile six columns" id={`project-${name}`}>
+    <div className="tile" id={`project-${name}`}>
         <div className="links">
             <a href={`https://github.com/${owner}/${name}`} className="github" target="_blank" rel="noopener noreferrer">
                 <svg height="16" viewBox="0 0 16 16">
@@ -31,6 +31,7 @@ export default ({
                 <span className={`tag ${tag}`}>
                     {({
                         cli: 'CLI',
+                        ci: 'CI',
                         node: 'NodeJS',
                         browser: 'Browser'
                     })[tag]}
