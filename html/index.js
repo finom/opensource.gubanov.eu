@@ -35,7 +35,7 @@ const Index = () => (
                 </div>
                 <h2 className="twelve columns">Circlecell</h2>
                 <p>
-                    Projects created for
+                    Projects created for{' '}
                     <a href="https://github.com/circlecell" target="_blank" rel="noopener noreferrer">
                         Circlecell
                     </a>.
