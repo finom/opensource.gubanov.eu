@@ -5,7 +5,8 @@ export default ({
     description,
     npm,
     tags,
-    owner
+    owner,
+    link,
 }) => (
     <div className="tile" id={`project-${name}`}>
         <div className="links">
@@ -15,11 +16,28 @@ export default ({
                 </svg>
                 {name}
             </a>
-            <a href={`https://www.npmjs.com/package/${npm}`} className="npm" target="_blank" rel="noopener noreferrer">
+
+            <Base
+                component="a"
+                exists={npm}
+                href={`https://www.npmjs.com/package/${npm}`}
+                className="npm"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <svg width="40" viewBox="0 0 18 7">
                     <use href="#npm" />
                 </svg>
-            </a>
+            </Base>
+
+            <Base
+                component="a"
+                exists={link}
+                href={link}
+                className="link"
+                target="_blank"
+                rel="noopener noreferrer"
+            />
         </div>
 
         <div className="description">
@@ -31,9 +49,12 @@ export default ({
                 <span className={`tag ${tag}`}>
                     {({
                         cli: 'CLI',
-                        ci: 'CI',
+                        deployment: 'Deployment',
                         node: 'NodeJS',
-                        browser: 'Browser'
+                        browser: 'Browser',
+                        website: 'Website',
+                        example: 'Example',
+                        build: 'Build',
                     })[tag]}
                 </span>
             ))}

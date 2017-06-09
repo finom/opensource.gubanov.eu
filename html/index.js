@@ -9,23 +9,40 @@ const Index = () => (
         <head>
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-            <title>Hell yeah</title>
+            <title>Open Source Projects made by Andrey Gubanov</title>
         </head>
 
         <body>
             <IconDefs />
             <div className="container">
-                <h1 className="twelve columns">Open Source Projects made by Andrey Gubanov (the page is under development yet)</h1>
+                <h1 className="twelve columns">Open Source Projects made by Andrey Gubanov</h1>
                 <div className="row">
-                    {data.general.map(({ name, description, npm, tags }) => (
-                        <Tile {...{ name, description, npm, tags, owner: 'finom' }} />
+                    {data.general.map(({ name, description, npm, tags, link }) => (
+                        <Tile {...{ name, description, npm, tags, link, owner: 'finom' }} />
                     ))}
                 </div>
                 <h2 className="twelve columns">Matreshka.js</h2>
-                <p>Matreshka.js is one big project with long history. This is the first (or at least one of the first) famous JavaScript framework made by somebody from exUSSR.</p>
+                <p>
+                    Matreshka.js is created by me when the maket used Knockout and
+                    Backbone frameworks which I didn&#39;t like.
+                    This is the first (or at least one of the first) famous JavaScript
+                    framework made by somebody from exUSSR.
+                </p>
                 <div className="row">
-                    {data.matreshka.map(({ name, description, npm, tags }) => (
-                        <Tile {...{ name, description, npm, tags, owner: 'finom' }} />
+                    {data.matreshka.map(({ name, description, npm, tags, owner, link }) => (
+                        <Tile {...{ name, description, npm, tags, owner, link }} />
+                    ))}
+                </div>
+                <h2 className="twelve columns">Circlecell</h2>
+                <p>
+                    Projects created for
+                    <a href="https://github.com/circlecell" target="_blank" rel="noopener noreferrer">
+                        Circlecell
+                    </a>.
+                </p>
+                <div className="row">
+                    {data.circlecell.map(({ name, description, npm, tags, owner, link }) => (
+                        <Tile {...{ name, description, npm, tags, owner, link }} />
                     ))}
                 </div>
             </div>

@@ -6,5 +6,6 @@
 				"browsers": ["last 3 versions"]
 			}
 		}]
-	]
+	],
+    "plugins": ["jsx-base-component"]
 }

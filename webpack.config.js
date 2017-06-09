@@ -8,16 +8,16 @@ const path = require('path');
 
 const { NODE_ENV } = process.env;
 const entry = {
-    app: ['skeleton-css/css/skeleton.css', './css/style.css']
+    app: ['skeleton-css/css/skeleton.css', './css/style.css'],
 };
 
 const plugins = [
     new HtmlWebpackPlugin({
-        template: 'html/index.js'
+        template: 'html/index.js',
     }),
     new ExtractTextPlugin({
-        filename: 'css/style.css'
-    })
+        filename: 'css/style.css',
+    }),
 ];
 
 if (NODE_ENV === 'development') {
@@ -26,7 +26,7 @@ if (NODE_ENV === 'development') {
     entry.app.push(`webpack-dev-server/client?http://localhost:${port}`);
     plugins.push(new OpenBrowserPlugin({
         url: `http://localhost:${port}`,
-        ignoreErrors: true
+        ignoreErrors: true,
     }));
 }
 
@@ -43,11 +43,11 @@ if (NODE_ENV === 'development') {
 
 entry.app.push(
     'babel-polyfill',
-    './js/index'
+    './js/index',
 );
 
 plugins.push(new CopyWebpackPlugin([
-    { from: 'static', to: '.' }
+    { from: 'static', to: '.' },
 ]));
 
 if (NODE_ENV === 'production') {
@@ -63,19 +63,19 @@ module.exports = {
         chunkFilename,
         path: path.resolve('dist/'),
         library: 'app',
-        libraryTarget: 'var'
+        libraryTarget: 'var',
     },
     module: {
         rules: [{
             test: /.js?$/,
-            use: ['babel-loader']
+            use: ['babel-loader'],
         }, {
             test: /\.css$/,
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
-                use: ['css-loader']
-            })
-        }]
+                use: ['css-loader'],
+            }),
+        }],
     },
-    devtool: 'source-map'
+    devtool: 'source-map',
 };
