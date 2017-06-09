@@ -43,7 +43,7 @@ if (NODE_ENV === 'development') {
 
 entry.app.push(
     'babel-polyfill',
-    './js/index',
+    './js/index'
 );
 
 plugins.push(new CopyWebpackPlugin([
