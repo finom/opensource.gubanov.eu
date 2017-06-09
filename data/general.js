@@ -44,6 +44,11 @@ export default [{
     npm: 'last-release-git',
     tags: ['node', 'deployment'],
 }, {
+    name: 'opensource.gubanov.eu',
+    description: 'This website. Is built automatically on Travis CI using html-webpack-plugin and react-dom/server.',
+    link: 'http://opensource.gubanov.eu',
+    tags: ['website'],
+}, {
     name: 'babel-plugin-transform-es2015-modules-simple-amd',
     description: 'The plugin transforms ECMAScript 2015 modules into compact AMD form.',
     npm: 'babel-plugin-transform-es2015-modules-simple-amd',
