@@ -416,6 +416,12 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root, body {
     font-size: 16px;
 }
@@ -457,10 +463,38 @@ a:hover {
     border-radius: 3px;
     color: #586069;
     margin-bottom: 1rem;
+    width: 48%;
+
+}
+
+.tile:nth-child(1n) {
+    margin-right: 2%;
+    margin-left: 0;
+    float: left;
+    clear: left;
+}
+
+.tile:nth-child(2n) {
+    margin-left: 2%;
+    margin-right: 0;
+    float: right;
+    clear: right;
+}
+
+@media (max-width: 550px) {
+    .tile:nth-child(1n), .tile:nth-child(2n) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 
 .links .github {
-
+    max-width: 85%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .links .github svg {
@@ -474,10 +508,20 @@ a:hover {
     margin-left: 5px;
 }
 
+.links .link {
+    float: right;
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+.links .link::before {
+    content: '\1F517';
+}
+
 .description {
     font-size: 0.9rem;
     margin: 0.5rem 0;
-    min-height: calc(2 * 1.6 * 1rem)
+    min-height: calc(3 * 1.6 * 1rem)
 }
 
 .tags {
@@ -502,12 +546,28 @@ a:hover {
     background: #178600;
 }
 
+.tag.deployment::before {
+    background: #701516;
+}
+
 .tag.node::before {
     background: #e34c26;
 }
 
 .tag.browser::before {
     background: #f1e05a;
+}
+
+.tag.website::before {
+    background: #f34b7d;
+}
+
+.tag.example::before {
+    background: #563d7c;
+}
+
+.tag.build::before {
+    background: #1e4aec;
 }
 
 .stars {
