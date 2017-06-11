@@ -9,12 +9,23 @@
 }
 
 body {
-    color: #24292e;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    font-weight: 400;
 }
 
 h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+h1 span {
+    font-size: 1.2rem;
+    display: block;
+    margin: 0.5rem 0;
 }
 
 h2 {

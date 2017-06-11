@@ -8,7 +8,10 @@ const path = require('path');
 
 const { NODE_ENV } = process.env;
 const entry = {
-    app: ['skeleton-css/css/skeleton.css', './css/style.css'],
+    app: [
+        'skeleton-css/css/skeleton.css',
+        './css/style.css'
+    ],
 };
 
 const plugins = [

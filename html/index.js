@@ -10,12 +10,21 @@ const Index = () => (
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <title>Open Source Projects made by Andrey Gubanov</title>
+            <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" />
         </head>
 
         <body>
             <IconDefs />
             <div className="container">
-                <h1 className="twelve columns">Open Source Projects made by Andrey Gubanov</h1>
+                <h1 className="twelve columns">
+                    Open Source Projects
+                    <span>
+                        by{' '}
+                        <a href="http://gubanov.eu" target="_blank">
+                            Andrey Gubanov
+                        </a>
+                    </span>
+                </h1>
                 <div className="row">
                     {data.general.map(({ name, description, npm, tags, link }) => (
                         <Tile {...{ name, description, npm, tags, link, owner: 'finom' }} />
