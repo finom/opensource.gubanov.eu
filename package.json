@@ -1,6 +1,7 @@
 {
   "name": "opensource.gubanov.eu",
   "version": "0.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +17,7 @@
     "url": "git+https://github.com/finom/opensource.gubanov.eu.git"
   },
   "author": "Andrey Gubanov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/finom/opensource.gubanov.eu/issues"
   },
