@@ -3,7 +3,10 @@ import React from 'react';
 export default [{
     name: 'opensource.gubanov.eu',
     description: <span>
-        This website. It&#39;s built automatically on Travis CI using html-webpack-plugin and react-dom/server. The deployment to Github Pages is made using <a href="https://github.com/finom/deploy-to-git">deploy-to-git</a>.
+        This website.
+        It&#39;s built automatically on Travis CI using html-webpack-plugin and react-dom/server.
+        The deployment to Github Pages is made using
+        <a href="https://github.com/finom/deploy-to-git">deploy-to-git</a>.
     </span>,
     link: 'http://opensource.gubanov.eu',
     tags: ['website'],
@@ -46,11 +49,13 @@ export default [{
 }, {
     name: 'last-release-git',
     description: <span>
-        A plugin for semantic-release. It&#39;s made for projects which must not be published at NPM (any private project). Instead, it uses Git tags for versioning.
+        A plugin for semantic-release.
+        It&#39;s made for projects which must not be published at NPM (any private project).
+        Instead, it uses Git tags for versioning.
     </span>,
     npm: 'last-release-git',
     tags: ['node', 'deployment'],
-},  {
+}, {
     name: 'babel-plugin-transform-es2015-modules-simple-amd',
     description: 'The plugin transforms ECMAScript 2015 modules into compact AMD form.',
     npm: 'babel-plugin-transform-es2015-modules-simple-amd',

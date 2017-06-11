@@ -20,7 +20,7 @@ const Index = () => (
                     Open Source Projects
                     <span>
                         by{' '}
-                        <a href="http://gubanov.eu" target="_blank">
+                        <a href="http://gubanov.eu" target="_blank" rel="noopener noreferrer">
                             Andrey Gubanov
                         </a>
                     </span>
