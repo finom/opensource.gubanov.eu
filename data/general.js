@@ -5,7 +5,7 @@ export default [{
     description: <span>
         This website.
         It&#39;s built automatically on Travis CI using html-webpack-plugin and react-dom/server.
-        The deployment to Github Pages is made using
+        The deployment to Github Pages is made using{' '}
         <a href="https://github.com/finom/deploy-to-git">deploy-to-git</a>.
     </span>,
     link: 'http://opensource.gubanov.eu',
