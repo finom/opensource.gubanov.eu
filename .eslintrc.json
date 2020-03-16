@@ -4,9 +4,6 @@
         "airbnb"
     ],
     "rules": {
-        "indent": ["error", 4],
-        "react/jsx-indent-props": ["error", 4],
-        "react/jsx-indent": ["error", 4],
         "no-var": "error",
         "react/jsx-filename-extension": 0,
         "react/prop-types": 0,
@@ -26,7 +23,8 @@
             "functions": "never"
         }],
         "react/jsx-no-undef": 0,
-        "react/no-danger": 0
+        "react/no-danger": 0,
+        "react/jsx-props-no-spreading": 0
     },
     "env": {
         "browser": true

@@ -1,11 +1,11 @@
 {
 	"presets": [
-		"react",
-        ["env", {
+		"@babel/preset-react",
+        ["@babel/preset-env", {
 			"targets": {
 				"browsers": ["last 3 versions"]
 			}
 		}]
 	],
-    "plugins": ["jsx-base-component"]
+    "plugins": ["jsx-conditional-component"]
 }
