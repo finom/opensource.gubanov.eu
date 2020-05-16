@@ -424,13 +424,13 @@ there.
 
 :root, body {
     font-size: 15px;
-    padding: 0 5%;
 }
 
 body {
     color: #000000;
     font-family: 'Raleway', sans-serif;
     line-height: 1.6;
+    padding: 0 5%;
 }
 
 h1 {
