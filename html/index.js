@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import IconDefs from './IconDefs';
-import Tile from './Tile';
 import data from '../data';
 import tagDefs from '../data/tagDefs';
+import Section from './Section';
 
 const Index = () => (
   <html lang="en">
@@ -31,55 +31,53 @@ const Index = () => (
           Show:
           <a className="filter-tag active" data-tag="all">All</a>
           {Object.entries(tagDefs).map(([tag, displayName]) => (
-            <a key={tag} className="filter-tag" data-tag={tag}>{displayName}</a>
+            <a key={tag} className="filter-tag" data-tag={tag}>
+              {tag === 'highlight' ? '♥ ' : ''}
+              {displayName}
+            </a>
           ))}
         </div>
-        <div className="row">
-          {data.general.map(({
-            name, description, npm, tags, link,
-          }) => (
-            <Tile {...{
-              name, description, npm, tags, link, owner: 'finom',
-            }}
-            />
-          ))}
-        </div>
-        <h2 className="twelve columns">Matreshka.js</h2>
-        <p className="section-description">
-          Matreshka.js is created by me when the maket used Knockout and
-          Backbone frameworks which I didn&#39;t like.
-          This is the first (or at least one of the first) famous JavaScript
-          framework made by somebody from exUSSR.
-        </p>
-        <div className="row">
-          {data.matreshka.map(({
-            name, description, npm, tags, owner, link,
-          }) => (
-            <Tile {...{
-              name, description, npm, tags, owner, link,
-            }}
-            />
-          ))}
-        </div>
-        <h2 className="twelve columns">Circlecell</h2>
-        <p className="section-description">
-          Projects created for
-          {' '}
-          <a href="https://github.com/circlecell" target="_blank" rel="noopener noreferrer">
-            Circlecell
-          </a>
-          .
-        </p>
-        <div className="row">
-          {data.circlecell.map(({
-            name, description, npm, tags, owner, link,
-          }) => (
-            <Tile {...{
-              name, description, npm, tags, owner, link,
-            }}
-            />
-          ))}
-        </div>
+
+        <Section items={data.general} />
+        <Section
+          items={data.seemple}
+          title="Seemple.js"
+          description={(
+            <>
+              Seemple.js (previously called Matreshka.js) is a reactive framework developed by me.
+              It&#39;s inspired by Backbone (if you remember what Backbone is)
+              and follows reactive principles.
+              Today it&#39;s not widely used but it still can be a
+              good starting point for JavaScript juniors.
+            </>
+        )}
+        />
+
+        <Section
+          items={data.defi}
+          title="defi.js"
+          description={(
+            <>
+              This is a hard-fork of Seemple.js where all framework-ish features were removed.
+            </>
+        )}
+        />
+
+        <Section
+          items={data.circlecell}
+          title="Circlecell"
+          description={(
+            <>
+              Projects created for
+              {' '}
+              <a href="https://github.com/circlecell" target="_blank" rel="noopener noreferrer">
+                Circlecell
+              </a>
+              {' '}
+              company.
+            </>
+        )}
+        />
       </div>
       <script dangerouslySetInnerHTML={{
         __html: `

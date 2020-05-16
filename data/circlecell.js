@@ -3,17 +3,17 @@ export default [{
   owner: 'circlecell',
   description: 'Rewritten from scratch validator and reformatter for JSON, a lightweight data-interchange format.',
   link: 'https://jsonlint.com',
-  tags: ['website'],
+  tags: ['highlight', 'website'],
 }, {
   name: 'jscompress.com',
   owner: 'circlecell',
   description: 'JSCompress is an online JavaScript compressor. This is the second version of the tool which is modular, has more features (eg drag\'n\'drop) and works 100% on client-side.',
   link: 'https://jscompress.com',
-  tags: ['website'],
+  tags: ['highlight', 'website'],
 }, {
   name: 'jsoncompare.com',
   owner: 'circlecell',
-  description: 'An advanced JSON linter built totally based on community feedback. It includes simple API which allows to store filled up JSON at Amazon S3 for the sharing.',
+  description: 'An advanced JSON linter built totally based on community feedback. It includes simple API which allows to store filled up JSON at Amazon S3 for sharing.',
   link: 'https://jsoncompare.com',
   tags: ['website'],
 }, {

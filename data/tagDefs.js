@@ -1,9 +1,10 @@
 export default {
-  cli: 'CLI',
-  deployment: 'Deployment',
+  highlight: 'Highlight',
+  cli: 'CLI Tool',
+  deployment: 'Deployment Tool',
   node: 'NodeJS',
   browser: 'Browser',
   website: 'Website',
   example: 'Example',
-  build: 'Build',
+  build: 'Build Tool',
 };

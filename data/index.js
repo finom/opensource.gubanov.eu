@@ -1,8 +1,8 @@
 import general from './general';
-import matreshka from './matreshka';
+import seemple from './seemple';
 import circlecell from './circlecell';
-import tagDefs from './tagDefs';
+import defi from './defi';
 
 export default {
-  general, matreshka, circlecell, tagDefs,
+  general, seemple, circlecell, defi,
 };

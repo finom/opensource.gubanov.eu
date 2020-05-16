@@ -9,10 +9,12 @@ export default ({
   tags,
   owner,
   link,
+  githubLink,
+  starsName,
 }) => (
-  <div className="tile" id={`project-${name}`} data-tags={tags.join(',')}>
+  <div className="tile" id={`project-${name}`} data-take-stars={starsName || name} data-tags={tags.join(',')}>
     <div className="links">
-      <a href={`https://github.com/${owner}/${name}`} className="github" target="_blank" rel="noopener noreferrer">
+      <a href={githubLink || `https://github.com/${owner}/${name}`} title={name} className="github" target="_blank" rel="noopener noreferrer">
         <svg height="22" viewBox="0 0 16 16">
           <use href="#github" />
         </svg>

@@ -26,7 +26,7 @@ export default [{
   name: 'github-embed',
   description: 'This tool allows to embed code from Github on a webpage (originally you could embed Github Gists only).',
   npm: 'github-embed',
-  tags: ['browser'],
+  tags: ['highlight', 'browser'],
 }, {
   name: 'bala',
   description: (
@@ -36,17 +36,17 @@ export default [{
     </span>
   ),
   npm: 'balajs',
-  tags: ['browser'],
+  tags: ['highlight', 'browser'],
 }, {
   name: 'deploy-to-git',
   description: 'The tool makes possible to automatically or manually deploy build artifacts to a Git repository. The tool works great with semantic-release and any CI service.',
   npm: 'deploy-to-git',
-  tags: ['cli', 'node', 'deployment'],
+  tags: ['highlight', 'cli', 'node', 'deployment'],
 }, {
   name: 'node-direct',
   description: 'The tool allows to run server-side JavaScript files via NodeJS as easily as PHP files via Apache (like index.php but index.srv.js instead). Express.js is used as a core.',
   npm: 'deploy-to-git',
-  tags: ['cli', 'node'],
+  tags: ['highlight', 'cli', 'node'],
 }, {
   name: 'fresh-up',
   description: (
@@ -83,7 +83,7 @@ export default [{
   tags: ['build'],
 }, {
   name: 'babel-plugin-transform-object-spread-inline',
-  description: 'The plugin transforms object spread syntax into fast "for" loops with no need to use Object.assign or other functions.',
+  description: 'The plugin transforms object spread syntax into fast "for" loops.',
   npm: 'babel-plugin-transform-es2015-modules-simple-commonjs',
   tags: ['build'],
 }, {
@@ -95,5 +95,38 @@ export default [{
   name: 'babel-plugin-nofn',
   description: 'Quite experimental plugin for Babel. It converts function calls (like nofn.forEach) into fast "for" loops.',
   npm: 'babel-plugin-nofn',
+  tags: ['build'],
+}, {
+  name: 'css-dot-js-loader',
+  description: 'A Webpack loader which allows to generate static CSS code via JavaScript.',
+  npm: 'css-dot-js-loader',
+  tags: ['build'],
+}, {
+  name: 'elegant-threading',
+  description: 'A straightforward definition of multi-threaded functions for NodeJS and browser.',
+  npm: 'elegant-threading',
+  tags: ['highlight', 'node', 'browser'],
+},
+{
+  name: 'check-imports',
+  description: 'Check imports in JS files and update package.json dependencies automatically.',
+  npm: 'check-imports',
+  tags: ['highlight', 'cli'],
+},
+{
+  name: 'babel-plugin-jsx-conditional-component',
+  description: (
+    <span>
+      The plugin is a fork of
+      {' '}
+      <a href="https://github.com/khmelevskii/babel-plugin-jsx-base-component">babel-plugin-jsx-base-component</a>
+      {' '}
+      made by
+      {' '}
+      <a href="https://github.com/khmelevskii">Yurii Khmelvskii</a>
+      . Originally it was forked to add support for Babel 7.
+    </span>
+  ),
+  npm: 'babel-plugin-jsx-conditional-component',
   tags: ['build'],
 }];
