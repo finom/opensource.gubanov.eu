@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
-    "lint": "eslint . --ext .js --ignore-pattern '**/node_modules/**' --ignore-pattern '**/dist/**'",
+    "lint": "eslint . --ext .js --ignore-pattern '**/node_modules/**' --ignore-pattern '**/dist/**' --fix",
     "upgrade": "ncu -u && npm i",
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "NODE_ENV=development webpack-dev-server --port 8111 --mode development",

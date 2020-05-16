@@ -8,12 +8,12 @@ export default [{
   githubLink: 'https://github.com/finom/defi/tree/master/packages/router',
   description: 'A router library for defi.js (hard-forked from Seemple.js). The library turns on two-way data binding between object properties and parts of an URL.',
   npm: 'defi-router',
-  tags: ['browser'],
+  tags: ['highlight', 'browser'],
 }, {
   name: 'defi.js.org',
   description: 'Full documentation for defi.js. It\'s built automatically via custom Webpack plugin script from JSDoc files.',
   link: 'https://defi.js.org',
-  tags: ['website'],
+  tags: ['website', 'documentation'],
 }, {
   name: 'common-binders',
   githubLink: 'https://github.com/finom/defi/tree/master/packages/common-binders',

@@ -45,7 +45,7 @@ export default [{
 }, {
   name: 'node-direct',
   description: 'The tool allows to run server-side JavaScript files via NodeJS as easily as PHP files via Apache (like index.php but index.srv.js instead). Express.js is used as a core.',
-  npm: 'deploy-to-git',
+  npm: 'node-direct',
   tags: ['highlight', 'cli', 'node'],
 }, {
   name: 'fresh-up',

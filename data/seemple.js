@@ -13,7 +13,7 @@ export default [{
   name: 'seemple.js.org',
   description: 'A website with detailed three-lingual documentation for Seemple.js. It\'s built automatically via custom Webpack plugin script from JSDoc files.',
   link: 'https://seemple.js.org',
-  tags: ['website'],
+  tags: ['website', 'documentation'],
 }, {
   name: 'seemple-parse-form',
   githubLink: 'https://github.com/finom/seemple/tree/master/packages/parse-form',
@@ -23,5 +23,5 @@ export default [{
 }, {
   name: 'seemple-examples-and-tutorials',
   description: 'The repository contains all the main tutorials and some example applications (Contact List, Markdown Editor, Tree View, SoundCloud player, TodoMVC).',
-  tags: ['example'],
+  tags: ['highlight', 'documentation'],
 }];

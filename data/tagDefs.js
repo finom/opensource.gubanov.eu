@@ -5,6 +5,6 @@ export default {
   node: 'NodeJS',
   browser: 'Browser',
   website: 'Website',
-  example: 'Example',
   build: 'Build Tool',
+  documentation: 'Documentation',
 };

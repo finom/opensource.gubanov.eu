@@ -243,6 +243,10 @@ section {
     background: #1e4aec;
 }
 
+.tag.documentation::before {
+  background: #8d75c8
+}
+
 .stars {
     font-weight: bold;
     font-size: 12px;
