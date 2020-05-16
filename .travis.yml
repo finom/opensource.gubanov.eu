@@ -4,9 +4,3 @@ node_js:
 branches:
   except:
     - gh-pages
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: npm run deploy
-  on:
-    branch: master
