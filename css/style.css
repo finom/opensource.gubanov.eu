@@ -450,7 +450,6 @@ h1 span {
 
 h2 {
     font-size: 1.5rem;
-    margin-top: 2rem;
     margin-bottom: 12px;
     font-weight: 900;
     letter-spacing: 0px;
@@ -470,6 +469,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+section {
+  margin-bottom: 2rem;
 }
 
 .clearfix:after {
@@ -515,20 +518,10 @@ a:hover {
     padding-left: 33px;
     border-radius: 3px;
     margin-bottom: 25px;
-    width: 48%;
+    width: 50%;
     padding-right: 40px;
     display: inline-block;
     vertical-align: top;
-}
-
-.tile:nth-child(1n) {
-    margin-right: 2%;
-    margin-left: 0;
-}
-
-.tile:nth-child(2n) {
-    margin-left: 2%;
-    margin-right: 0;
 }
 
 @media (max-width: 550px) {
@@ -622,7 +615,7 @@ a:hover {
     font-size: 12px;
 }
 
-.tag::before {
+.tag:not(.highlight)::before {
     content: '';
     width: 10px;
     height: 10px;
@@ -631,6 +624,13 @@ a:hover {
     vertical-align: top;
     margin-right: 5px;
     margin-top: 6px;
+}
+
+.tag.highlight::before {
+  content: '♥';
+  margin-right: 4px;
+  font-family: sans-serif;
+  color: #e34c26;
 }
 
 .tag.cli::before {
@@ -642,7 +642,7 @@ a:hover {
 }
 
 .tag.node::before {
-    background: #e34c26;
+    background: #9ce326;
 }
 
 .tag.browser::before {
