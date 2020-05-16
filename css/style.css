@@ -1,38 +1,41 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root, body {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 body {
     color: #000000;
     font-family: 'Raleway', sans-serif;
-}
-
-h1, h2 {
-    font-weight: 400;
+    line-height: 1.6;
 }
 
 h1 {
-  line-height: 56px;
+  line-height: 1;
   font-size: 48px;
   font-weight: 900;
+  margin-bottom: 28px;
+  margin-top: 40px;
 }
 
 h1 span {
-    font-size: 1.2rem;
+    font-size: 15px;
     display: block;
-    margin: 0.5rem 0;
+    font-weight: normal;
+    margin-top: 18px;
+    letter-spacing: 0.2px;
 }
 
 h2 {
     font-size: 1.5rem;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
+    font-weight: 900;
+    letter-spacing: 0px;
 }
 
 p {
@@ -40,7 +43,7 @@ p {
 }
 
 a, a:hover {
-    color: #0366d6;
+    color: #2e83e5;
 }
 
 a {
@@ -51,31 +54,69 @@ a:hover {
     text-decoration: underline;
 }
 
-.tile {
-    border: 1px solid #e1e4e8;
-    padding: 1rem;
-    border-radius: 3px;
-    color: #586069;
-    margin-bottom: 1rem;
-    width: 48%;
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+.container {
+  width: 1000px;
+}
+
+.filters {
+  font-size: 12px;
+  margin-bottom: 28px;
+}
+
+.filters .filter-tag {
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.filters .filter-tag.active {
+  background-color: #ebf2fc;
+}
+
+.filters .filter-tag:first-child {
+  margin-left: 12px;
+}
+
+.section-description {
+  max-width: 700px;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: #9b9b9b;
+  margin-bottom: 30px;
+}
+
+.tile {
+    padding-left: 33px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    width: 48%;
+    padding-right: 40px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .tile:nth-child(1n) {
     margin-right: 2%;
     margin-left: 0;
-    float: left;
-    clear: left;
 }
 
 .tile:nth-child(2n) {
     margin-left: 2%;
     margin-right: 0;
-    float: right;
-    clear: right;
 }
 
 @media (max-width: 550px) {
+  .container {
+    width: 100%;
+  }
     .tile:nth-child(1n), .tile:nth-child(2n) {
         margin-left: 0;
         margin-right: 0;
@@ -84,18 +125,32 @@ a:hover {
 }
 
 .links .github {
-    max-width: 85%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    max-width: 80%;
     display: inline-block;
+    position: relative;
+}
+
+.links .github .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 900;
+  vertical-align: middle;
 }
 
 .links .github svg {
     vertical-align: middle;
     margin-right: 5px;
+    position: absolute;
+    left: -2rem;
+    top: 4px;
 }
 
+/*
 .links .npm {
     float: right;
     margin-top: 3px;
@@ -111,11 +166,33 @@ a:hover {
 .links .link::before {
     content: '\1f517';
 }
+*/
+
+.links .home {
+  font-family: Raleway;
+  font-size: 14px;
+  line-height: 1.57;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+.links .home::before {
+  content: '→';
+  line-height: 1.2;
+  border: 1px solid currentColor;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+
 
 .description {
     font-size: 0.9rem;
     margin: 0.5rem 0;
-    min-height: calc(3 * 1.6 * 1rem)
 }
 
 .tags {
@@ -124,16 +201,18 @@ a:hover {
 
 .tag {
     margin-right: 1rem;
+    font-size: 12px;
 }
 
 .tag::before {
     content: '';
-    width: 1rem;
-    height: 1rem;
+    width: 10px;
+    height: 10px;
     display: inline-block;
     border-radius: 50%;
-    vertical-align: middle;
+    vertical-align: top;
     margin-right: 5px;
+    margin-top: 6px;
 }
 
 .tag.cli::before {
@@ -165,7 +244,8 @@ a:hover {
 }
 
 .stars {
-    float: right;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 .stars:empty {
@@ -174,4 +254,6 @@ a:hover {
 
 .stars::before {
     content: '★';
+    margin-right: 4px;
+    display: inline-block;
 }

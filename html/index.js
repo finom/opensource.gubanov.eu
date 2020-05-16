@@ -3,6 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import IconDefs from './IconDefs';
 import Tile from './Tile';
 import data from '../data';
+import tagDefs from '../data/tagDefs';
 
 const Index = () => (
   <html lang="en">
@@ -26,6 +27,13 @@ const Index = () => (
             </a>
           </span>
         </h1>
+        <div className="filters">
+          Show:
+          <a className="filter-tag active" data-tag="all">All</a>
+          {Object.entries(tagDefs).map(([tag, displayName]) => (
+            <a key={tag} className="filter-tag" data-tag={tag}>{displayName}</a>
+          ))}
+        </div>
         <div className="row">
           {data.general.map(({
             name, description, npm, tags, link,
@@ -37,7 +45,7 @@ const Index = () => (
           ))}
         </div>
         <h2 className="twelve columns">Matreshka.js</h2>
-        <p>
+        <p className="section-description">
           Matreshka.js is created by me when the maket used Knockout and
           Backbone frameworks which I didn&#39;t like.
           This is the first (or at least one of the first) famous JavaScript
@@ -54,7 +62,7 @@ const Index = () => (
           ))}
         </div>
         <h2 className="twelve columns">Circlecell</h2>
-        <p>
+        <p className="section-description">
           Projects created for
           {' '}
           <a href="https://github.com/circlecell" target="_blank" rel="noopener noreferrer">

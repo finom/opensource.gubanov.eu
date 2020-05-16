@@ -1,5 +1,7 @@
 import React from 'react';
 
+import tagDefs from '../data/tagDefs';
+
 export default ({
   name,
   description,
@@ -8,16 +10,24 @@ export default ({
   owner,
   link,
 }) => (
-  <div className="tile" id={`project-${name}`}>
+  <div className="tile" id={`project-${name}`} data-tags={tags.join(',')}>
     <div className="links">
       <a href={`https://github.com/${owner}/${name}`} className="github" target="_blank" rel="noopener noreferrer">
-        <svg height="16" viewBox="0 0 16 16">
+        <svg height="22" viewBox="0 0 16 16">
           <use href="#github" />
         </svg>
-        {name}
+        <span className="text">{name}</span>
       </a>
 
       <Base
+        component="a"
+        href={npm ? `https://www.npmjs.com/package/${npm}` : link}
+        className="home"
+        exists={npm || link}
+      >
+        {npm ? 'NPM' : 'LINK'}
+      </Base>
+      {/* <Base
         component="a"
         exists={npm}
         href={`https://www.npmjs.com/package/${npm}`}
@@ -38,6 +48,7 @@ export default ({
         target="_blank"
         rel="noopener noreferrer"
       />
+      */}
     </div>
 
     <div className="description">
@@ -47,15 +58,7 @@ export default ({
     <div className="tags">
       {tags.map((tag) => (
         <span className={`tag ${tag}`}>
-          {({
-            cli: 'CLI',
-            deployment: 'Deployment',
-            node: 'NodeJS',
-            browser: 'Browser',
-            website: 'Website',
-            example: 'Example',
-            build: 'Build',
-          })[tag]}
+          {tagDefs[tag]}
         </span>
       ))}
       <span className="stars" />

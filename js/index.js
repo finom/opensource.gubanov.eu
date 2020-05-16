@@ -11,3 +11,19 @@
     }
   }
 });
+
+const filterTags = [...document.querySelectorAll('.filter-tag')];
+filterTags.forEach((item) => {
+  item.addEventListener('click', ({ target }) => {
+    const { tag } = target.dataset;
+
+    filterTags.forEach(
+      (filterTag) => filterTag.classList.toggle('active', filterTag.dataset.tag === tag)
+    );
+
+    [...document.querySelectorAll('.tile')].forEach((tile) => {
+      // eslint-disable-next-line no-param-reassign
+      tile.style.display = (tag === 'all' || tile.dataset.tags.split(',').includes(tag)) ? '' : 'none';
+    });
+  });
+});

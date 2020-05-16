@@ -4,9 +4,12 @@ export default [{
   name: 'opensource.gubanov.eu',
   description: (
     <span>
-      This website.
+      This page! Designed by
+      {' '}
+      <a href="https://github.com/alexkolodko" target="_blank" rel="noopener noreferrer">Alex Kolodko</a>
+      .
       It&#39;s built automatically on Travis CI using html-webpack-plugin and react-dom/server.
-      The deployment to Github Pages is made using
+      The deployment to Github Pages is made using another project I&apos;ve developed
       {' '}
       <a href="https://github.com/finom/deploy-to-git">deploy-to-git</a>
       .
