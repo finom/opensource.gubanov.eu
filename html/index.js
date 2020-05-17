@@ -18,6 +18,9 @@ const Index = () => (
       <IconDefs />
       <div className="container">
         <h1 className="twelve columns">
+          <span className="total-downloads">Checking...</span>
+          <span className="total-stars">Checking...</span>
+
           Open Source Projects
           <span>
             by

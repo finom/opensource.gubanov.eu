@@ -1,5 +1,5 @@
 export default {
-  highlight: 'Highlight',
+  highlight: 'Highlighted',
   cli: 'CLI Tool',
   deployment: 'Deployment Tool',
   node: 'NodeJS',

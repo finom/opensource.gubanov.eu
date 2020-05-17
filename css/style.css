@@ -262,3 +262,32 @@ section {
     margin-right: 4px;
     display: inline-block;
 }
+
+
+.total-downloads, .total-stars {
+  font-weight: 400;
+  font-size: 12px;
+  float: right;
+  clear: both;
+  font-weight: bold;
+}
+
+.total-downloads:empty, .total-stars:empty {
+    display: none;
+}
+
+.total-stars::before, .total-downloads::before {
+  display: inline-block;
+  margin-right: 4px;
+  font-weight: 400;
+  color: #9B9BA2;
+}
+
+.total-stars::before {
+    content: 'Github stars in total';
+
+}
+
+.total-downloads::before {
+    content: 'NPM installs for last 30 days';
+}
