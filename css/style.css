@@ -691,6 +691,10 @@ section {
   margin-left: 30px;
 }
 
+.total-stars {
+  margin-bottom: 15px;
+}
+
 .total-downloads:empty, .total-stars:empty {
     display: none;
 }
