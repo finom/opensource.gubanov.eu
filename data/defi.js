@@ -10,10 +10,16 @@ export default [{
   npm: 'defi-router',
   tags: ['highlight', 'browser'],
 }, {
+  name: 'defi-react',
+  githubLink: 'https://github.com/finom/defi/tree/master/packages/react',
+  description: 'A super simple React state management library powered by defi.',
+  npm: 'defi-react',
+  tags: ['highlight', 'browser'],
+}, {
   name: 'defi.js.org',
   description: 'Full documentation for defi.js. It\'s built automatically via custom Webpack plugin script from JSDoc files.',
   link: 'https://defi.js.org',
-  tags: ['website', 'documentation'],
+  tags: ['highlight', 'website', 'documentation'],
 }, {
   name: 'common-binders',
   githubLink: 'https://github.com/finom/defi/tree/master/packages/common-binders',
