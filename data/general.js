@@ -32,7 +32,7 @@ export default [{
   description: (
     <span>
       A function for elements selections (in other words a tiny jQuery alternative)
-      in less than &#8539; of a kilobyte.
+      in less than ¼ of a kilobyte.
     </span>
   ),
   npm: 'balajs',
