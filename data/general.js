@@ -18,6 +18,11 @@ export default [{
   link: 'http://opensource.gubanov.eu',
   tags: ['website'],
 }, {
+  name: 'use-change',
+  description: 'The stupid simple React store hook.',
+  npm: 'use-change',
+  tags: ['highlight', 'browser'],
+}, {
   name: 'mongo-git-backup',
   description: 'The tool exports text dumps (via mongoexport) of given MongoDB database to given Git repository and restores them back (via mongoimport). ',
   npm: 'mongo-git-backup',
