@@ -19,7 +19,7 @@ export default [{
   tags: ['website'],
 }, {
   name: 'use-change',
-  description: 'The stupid simple React store hook.',
+  description: 'The one "keep it stupid simple" React hook for application state. Dramatically decreases amounts of code of React data store!',
   npm: 'use-change',
   tags: ['highlight', 'browser'],
 }, {
