@@ -43,11 +43,20 @@ const Index = () => (
 
         <Section items={data.general} />
         <Section
+          items={data.altamoon}
+          title="Altamoon"
+          description={(
+            <>
+              Altamoon is a libre desktop &amp; web app made by professional traders, designed for fast and precise trading.
+            </>
+        )}
+        />
+        <Section
           items={data.seemple}
           title="Seemple.js"
           description={(
             <>
-              Seemple.js (previously called Matreshka.js) is a reactive framework developed by me.
+              Seemple.js (formerly called Matreshka.js) is a reactive framework developed by me.
               It&#39;s inspired by Backbone (if you remember what Backbone is)
               and follows reactive principles.
               Today it&#39;s not widely used but it still can be a
