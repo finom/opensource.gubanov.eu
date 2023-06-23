@@ -23,6 +23,16 @@ export default [{
   npm: 'use-change',
   tags: ['highlight', 'browser'],
 }, {
+  name: 'use-0',
+  description: 'Another experimental React state library to try alternative syntax for React hooks.',
+  npm: 'use-0',
+  tags: ['browser'],
+}, {
+  name: 'llm-chat',
+  description: 'Reproduction of ChatGPT using OpenAI API, Langchain and NextJS.',
+  link: 'https://llm-chat-3e0c1ec27e9f.herokuapp.com/',
+  tags: ['highlight', 'website'],
+}, {
   name: 'mongo-git-backup',
   description: 'The tool exports text dumps (via mongoexport) of given MongoDB database to given Git repository and restores them back (via mongoimport). ',
   npm: 'mongo-git-backup',
