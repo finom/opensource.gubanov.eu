@@ -1,3 +1,301 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root, body {
+    font-size: 15px;
+}
+
+body {
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    padding: 0 2%;
+}
+
+h1 {
+  line-height: 1;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 28px;
+  margin-top: 40px;
+}
+
+h1 span {
+    font-size: 15px;
+    display: block;
+    font-weight: normal;
+    margin-top: 18px;
+    letter-spacing: 0.2px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a, a:hover {
+    color: #2e83e5;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1000px;
+}
+
+.filters {
+  font-size: 12px;
+  margin-bottom: 28px;
+}
+
+.filters .filter-tag {
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.filters .filter-tag.active {
+  background-color: #ebf2fc;
+}
+
+.filters .filter-tag:first-child {
+  margin-left: 12px;
+}
+
+.section-description {
+  max-width: 700px;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: #9b9b9b;
+  margin-bottom: 30px;
+}
+
+.tile {
+    padding-left: 33px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    width: 50%;
+    padding-right: 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 100%;
+  }
+    .tile:nth-child(1n), .tile:nth-child(2n) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+.links .github {
+    max-width: 80%;
+    display: inline-block;
+    position: relative;
+}
+
+.links .github .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.links .github svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    position: absolute;
+    left: -2rem;
+    top: 4px;
+}
+
+/*
+.links .npm {
+    float: right;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.links .link {
+    float: right;
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+.links .link::before {
+    content: '\1f517';
+}
+*/
+
+.links .home {
+  font-family: Raleway;
+  font-size: 14px;
+  line-height: 1.57;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+.links .home::before {
+  content: '→';
+  line-height: 1.2;
+  border: 1px solid currentColor;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+
+
+.description {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.tags {
+    font-size: 0.9rem;
+}
+
+.tag {
+    margin-right: 1rem;
+    font-size: 12px;
+}
+
+.tag:not(.highlight)::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+.tag.highlight::before {
+  content: '♥';
+  margin-right: 4px;
+  font-family: sans-serif;
+  color: #e34c26;
+}
+
+.tag.cli::before {
+    background: #178600;
+}
+
+.tag.deployment::before {
+    background: #701516;
+}
+
+.tag.node::before {
+    background: #9ce326;
+}
+
+.tag.browser::before {
+    background: #f1e05a;
+}
+
+.tag.website::before {
+    background: #f34b7d;
+}
+
+.tag.example::before {
+    background: #563d7c;
+}
+
+.tag.build::before {
+    background: #1e4aec;
+}
+
+.tag.documentation::before {
+  background: #8d75c8
+}
+
+.stars {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.stars:empty {
+    display: none;
+}
+
+.stars::before {
+    content: '★';
+    margin-right: 4px;
+    display: inline-block;
+}
+
+
+.total-downloads, .total-stars {
+  font-weight: 400;
+  font-size: 12px;
+  float: right;
+  clear: both;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.total-stars {
+  margin-bottom: 15px;
+}
+
+.total-downloads:empty, .total-stars:empty {
+    display: none;
+}
+
+.total-stars::before, .total-downloads::before {
+  display: inline-block;
+  margin-right: 4px;
+  font-weight: 400;
+  color: #9B9BA2;
+}
+
+.total-stars::before {
+    content: 'Github stars in total';
+
+}
+
+.total-downloads::before {
+    content: 'NPM installs for last 30 days';
+}
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -416,303 +714,5 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root, body {
-    font-size: 15px;
-}
-
-body {
-    color: #000000;
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.6;
-    padding: 0 2%;
-}
-
-h1 {
-  line-height: 1;
-  font-size: 48px;
-  font-weight: 900;
-  margin-bottom: 28px;
-  margin-top: 40px;
-}
-
-h1 span {
-    font-size: 15px;
-    display: block;
-    font-weight: normal;
-    margin-top: 18px;
-    letter-spacing: 0.2px;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    font-weight: 900;
-    letter-spacing: 0px;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-a, a:hover {
-    color: #2e83e5;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.container {
-  width: 1000px;
-}
-
-.filters {
-  font-size: 12px;
-  margin-bottom: 28px;
-}
-
-.filters .filter-tag {
-  padding: 3px 8px;
-  border-radius: 10px;
-  margin-right: 8px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.filters .filter-tag.active {
-  background-color: #ebf2fc;
-}
-
-.filters .filter-tag:first-child {
-  margin-left: 12px;
-}
-
-.section-description {
-  max-width: 700px;
-  font-size: 13px;
-  letter-spacing: 0.2px;
-  color: #9b9b9b;
-  margin-bottom: 30px;
-}
-
-.tile {
-    padding-left: 33px;
-    border-radius: 3px;
-    margin-bottom: 25px;
-    width: 50%;
-    padding-right: 40px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-@media (max-width: 550px) {
-  .container {
-    width: 100%;
-  }
-    .tile:nth-child(1n), .tile:nth-child(2n) {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-    }
-}
-
-.links .github {
-    max-width: 80%;
-    display: inline-block;
-    position: relative;
-}
-
-.links .github .text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: inline-block;
-  width: 100%;
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 900;
-  vertical-align: middle;
-}
-
-.links .github svg {
-    vertical-align: middle;
-    margin-right: 5px;
-    position: absolute;
-    left: -2rem;
-    top: 4px;
-}
-
-/*
-.links .npm {
-    float: right;
-    margin-top: 3px;
-    margin-left: 5px;
-}
-
-.links .link {
-    float: right;
-    margin-top: 0;
-    margin-left: 5px;
-}
-
-.links .link::before {
-    content: '\1f517';
-}
-*/
-
-.links .home {
-  font-family: Raleway;
-  font-size: 14px;
-  line-height: 1.57;
-  margin-left: 20px;
-  white-space: nowrap;
-}
-
-.links .home::before {
-  content: '→';
-  line-height: 1.2;
-  border: 1px solid currentColor;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 4px;
-  font-size: 12px;
-}
-
-
-
-.description {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-}
-
-.tags {
-    font-size: 0.9rem;
-}
-
-.tag {
-    margin-right: 1rem;
-    font-size: 12px;
-}
-
-.tag:not(.highlight)::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    border-radius: 50%;
-    vertical-align: top;
-    margin-right: 5px;
-    margin-top: 6px;
-}
-
-.tag.highlight::before {
-  content: '♥';
-  margin-right: 4px;
-  font-family: sans-serif;
-  color: #e34c26;
-}
-
-.tag.cli::before {
-    background: #178600;
-}
-
-.tag.deployment::before {
-    background: #701516;
-}
-
-.tag.node::before {
-    background: #9ce326;
-}
-
-.tag.browser::before {
-    background: #f1e05a;
-}
-
-.tag.website::before {
-    background: #f34b7d;
-}
-
-.tag.example::before {
-    background: #563d7c;
-}
-
-.tag.build::before {
-    background: #1e4aec;
-}
-
-.tag.documentation::before {
-  background: #8d75c8
-}
-
-.stars {
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.stars:empty {
-    display: none;
-}
-
-.stars::before {
-    content: '★';
-    margin-right: 4px;
-    display: inline-block;
-}
-
-
-.total-downloads, .total-stars {
-  font-weight: 400;
-  font-size: 12px;
-  float: right;
-  clear: both;
-  font-weight: bold;
-  margin-left: 30px;
-}
-
-.total-stars {
-  margin-bottom: 15px;
-}
-
-.total-downloads:empty, .total-stars:empty {
-    display: none;
-}
-
-.total-stars::before, .total-downloads::before {
-  display: inline-block;
-  margin-right: 4px;
-  font-weight: 400;
-  color: #9B9BA2;
-}
-
-.total-stars::before {
-    content: 'Github stars in total';
-
-}
-
-.total-downloads::before {
-    content: 'NPM installs for last 30 days';
-}
 
 /*# sourceMappingURL=style.css.map*/
