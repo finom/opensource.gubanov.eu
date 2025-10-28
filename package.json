@@ -10,7 +10,7 @@
     "upgrade": "ncu -u && npm i",
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=development webpack-dev-server --port 8111 --mode development",
-    "deploy": "rimraf dist; deploy-to-git"
+    "deploy": "rimraf dist; NODE_OPTIONS=--openssl-legacy-provider deploy-to-git"
   },
   "repository": {
     "type": "git",
