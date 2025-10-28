@@ -3,7 +3,8 @@ import seemple from './seemple';
 import circlecell from './circlecell';
 import defi from './defi';
 import altamoon from './altamoon';
+import vovk from './vovk';
 
 export default {
-  general, seemple, circlecell, defi, altamoon,
+  general, vovk, seemple, circlecell, defi, altamoon,
 };

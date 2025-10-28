@@ -4,12 +4,11 @@ export default [{
   name: 'opensource.gubanov.eu',
   description: (
     <span>
-      This page! Designed by
+      This page. Designed by
       {' '}
       <a href="https://github.com/alexkolodko" target="_blank" rel="noopener noreferrer">Alex Kolodko</a>
       .
-      It&#39;s built automatically on Travis CI using html-webpack-plugin and react-dom/server.
-      The deployment to Github Pages is made using another project I&apos;ve developed
+      Deployed to Github Pages with another project I&apos;ve developed
       {' '}
       <a href="https://github.com/finom/deploy-to-git">deploy-to-git</a>
       .
@@ -18,32 +17,32 @@ export default [{
   link: 'http://opensource.gubanov.eu',
   tags: ['website'],
 }, {
-  name: 'use-change',
-  description: 'The one "keep it stupid simple" React hook for application state. Dramatically decreases amounts of code of React data store!',
-  npm: 'use-change',
-  tags: ['highlight', 'browser'],
+  name: 'tailwind-to-object',
+  description: 'A tool that converts Tailwind CSS classes to JavaScript objects.',
+  npm: 'tailwind-to-object',
+  tags: ['highlight', 'browser', 'node'],
 }, {
-  name: 'use-0',
-  description: 'Another experimental React state library to try alternative syntax for React hooks.',
-  npm: 'use-0',
+  name: 'use-change',
+  description: 'The one "keep it stupid simple" React hook for application state.',
+  npm: 'use-change',
   tags: ['browser'],
 }, {
-  name: 'llm-chat',
-  description: 'Reproduction of ChatGPT using OpenAI API, Langchain and NextJS.',
-  link: 'https://llm-chat-3e0c1ec27e9f.herokuapp.com/',
-  tags: ['highlight', 'website'],
+  name: 'rebloom',
+  description: 'Another experimental React state library to try alternative syntax for React hooks.',
+  npm: 'rebloom',
+  tags: ['browser'],
 }, {
   name: 'mongo-git-backup',
-  description: 'The tool exports text dumps (via mongoexport) of given MongoDB database to given Git repository and restores them back (via mongoimport). ',
+  description: 'The tool exports text dumps (via mongoexport) of a MongoDB database to a Git repository and restores them back (via mongoimport).',
   npm: 'mongo-git-backup',
   tags: ['cli', 'node'],
 }, {
   name: 'github-embed',
-  description: 'This tool allows to embed code from Github on a webpage (originally you could embed Github Gists only).',
+  description: 'This tool allows to embed code from Github on a webpage.',
   npm: 'github-embed',
-  tags: ['highlight', 'browser'],
+  tags: ['browser'],
 }, {
-  name: 'bala',
+  name: 'tsimmes',
   description: (
     <span>
       A function for elements selections (in other words a tiny jQuery alternative)
@@ -54,14 +53,14 @@ export default [{
   tags: ['highlight', 'browser'],
 }, {
   name: 'deploy-to-git',
-  description: 'The tool makes possible to automatically or manually deploy build artifacts to a Git repository. The tool works great with semantic-release and any CI service.',
+  description: 'The tool deploys build artifacts to a Git repository. Works great with semantic-release and any CI service.',
   npm: 'deploy-to-git',
   tags: ['highlight', 'cli', 'node', 'deployment'],
 }, {
   name: 'node-direct',
   description: 'The tool allows to run server-side JavaScript files via NodeJS as easily as PHP files via Apache (like index.php but index.srv.js instead). Express.js is used as a core.',
   npm: 'node-direct',
-  tags: ['highlight', 'cli', 'node'],
+  tags: ['cli', 'node'],
 }, {
   name: 'fresh-up',
   description: (
@@ -80,7 +79,7 @@ export default [{
   description: (
     <span>
       A plugin for semantic-release.
-      It&#39;s made for projects which must not be published at NPM (any private project).
+      It&#39;s made for projects which shouldn&#39;t be published at NPM (any private project).
       Instead, it uses Git tags for versioning.
     </span>
   ),
@@ -108,19 +107,19 @@ export default [{
   tags: ['node'],
 }, {
   name: 'babel-plugin-nofn',
-  description: 'Quite experimental plugin for Babel. It converts function calls (like nofn.forEach) into fast "for" loops.',
+  description: 'An experimental plugin for Babel. It converts function calls (like nofn.forEach) into fast "for" loops.',
   npm: 'babel-plugin-nofn',
   tags: ['build'],
 }, {
   name: 'css-dot-js-loader',
-  description: 'A Webpack loader which allows to generate static CSS code via JavaScript.',
+  description: 'A Webpack loader that allows to generate static CSS code via JavaScript.',
   npm: 'css-dot-js-loader',
   tags: ['build'],
 }, {
   name: 'elegant-threading',
   description: 'A straightforward definition of multi-threaded functions for NodeJS and browser.',
   npm: 'elegant-threading',
-  tags: ['highlight', 'node', 'browser'],
+  tags: ['node', 'browser'],
 },
 {
   name: 'check-imports',
