@@ -1,6 +1,7 @@
 (async () => {
   let totalStars = 0;
-  await Promise.all(['finom', 'circlecell'].map(async (owner) => {
+  const table = [];
+  await Promise.all(['finom'].map(async (owner) => {
     let resp;
     try {
       resp = await (
@@ -14,6 +15,7 @@
 
 
     for (const { name, stargazers_count: stargazers } of resp) {
+      table.push({ name, stargazers });
       const tile = document.querySelector(`[data-take-stars="${name}"]`);
       totalStars += stargazers;
       if (tile) {
@@ -25,6 +27,9 @@
   if (totalStars > 0) {
     document.querySelector('.total-stars').textContent = `★ ${totalStars.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
   }
+
+  table.sort((a, b) => b.stargazers - a.stargazers);
+  console.table(table);
 })();
 
 

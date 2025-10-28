@@ -28,6 +28,8 @@ const Index = () => (
             <a href="http://gubanov.eu" target="_blank" rel="noopener noreferrer">
               Andrey Gubanov
             </a>
+            <br />
+            <p>since 2011</p>
           </span>
         </h1>
         <div className="filters">
@@ -40,8 +42,25 @@ const Index = () => (
             </a>
           ))}
         </div>
+        <Section
+          items={data.vovk}
+          title="Vovk.ts"
+          description={(
+            <>
+              Vovk.ts is a conceptual back-end meta-framework built on top of the Next.js App Router, designed for efficiency and an unprecedented developer experience.
+            </>
+        )}
+        />
+        <Section
+          items={data.general}
+          title="Misc"
+          description={(
+            <>
+              Random projects that don&apos;t fit into other categories.
+            </>
+        )}
+        />
 
-        <Section items={data.general} />
         <Section
           items={data.altamoon}
           title="Altamoon"
@@ -51,16 +70,13 @@ const Index = () => (
             </>
         )}
         />
+
         <Section
           items={data.seemple}
           title="Seemple.js"
           description={(
             <>
-              Seemple.js (formerly called Matreshka.js) is a reactive framework developed by me.
-              It&#39;s inspired by Backbone (if you remember what Backbone is)
-              and follows reactive principles.
-              Today it&#39;s not widely used but it still can be a
-              good starting point for JavaScript juniors.
+              Seemple.js (formerly called Matreshka.js) is a reactive JavaScript framework, inspired by Backbone.
             </>
         )}
         />
@@ -86,7 +102,7 @@ const Index = () => (
                 Circlecell
               </a>
               {' '}
-              company.
+              org.
             </>
         )}
         />

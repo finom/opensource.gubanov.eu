@@ -1,25 +1,25 @@
 export default [{
   name: 'defi',
-  description: 'A bunch of utilities that enable accessor-based reactivity for JavaScript objects. That\'s the library I really recommend to try!',
+  description: 'A bunch of utilities that enable accessor-based reactivity for JavaScript objects.',
   npm: 'defi',
-  tags: ['highlight', 'browser', 'node'],
+  tags: ['browser', 'node'],
 }, {
   name: 'defi-router',
   githubLink: 'https://github.com/finom/defi/tree/master/packages/router',
-  description: 'A router library for defi.js (hard-forked from Seemple.js). The library turns on two-way data binding between object properties and parts of an URL.',
+  description: 'A router library for defi.js (hard-forked from Seemple.js). The library turns on two-way data binding between object properties and parts of a URL.',
   npm: 'defi-router',
-  tags: ['highlight', 'browser'],
+  tags: ['browser'],
 }, {
   name: 'defi-react',
   githubLink: 'https://github.com/finom/defi/tree/master/packages/react',
-  description: 'A super simple React state management library powered by defi.',
+  description: 'A React state management library powered by defi.',
   npm: 'defi-react',
-  tags: ['highlight', 'browser'],
+  tags: ['browser'],
 }, {
   name: 'defi.js.org',
   description: 'Full documentation for defi.js. It\'s built automatically via custom Webpack plugin script from JSDoc files.',
   link: 'https://defi.js.org',
-  tags: ['highlight', 'website', 'documentation'],
+  tags: ['website', 'documentation'],
 }, {
   name: 'common-binders',
   githubLink: 'https://github.com/finom/defi/tree/master/packages/common-binders',
@@ -29,7 +29,7 @@ export default [{
 }, {
   name: 'codemirror-binder',
   githubLink: 'https://github.com/finom/defi/tree/master/packages/codemirror-binder',
-  description: 'This binder creator returns a binder which initializes and binds CodeMirror instance created with fromTextArea function to a property.',
+  description: 'This binder creator returns a binder which initializes and binds CodeMirror instance created with fromTextArea function to an object property.',
   npm: 'codemirror-binder',
   tags: ['browser'],
 }, {
