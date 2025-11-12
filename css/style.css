@@ -718,7 +718,7 @@ section {
 }
 
 .total-downloads::before {
-    content: 'NPM installs for last 30 days';
+    content: 'NPM installs over the past week';
 }
 
 /*# sourceMappingURL=style.css.map*/
