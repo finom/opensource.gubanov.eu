@@ -39,8 +39,10 @@
   ).json();
   const allDownloads = await Promise.all(objects.map(async ({ package: { name } }) => {
     const { downloads } = await (
-      await fetch(`https://api.npmjs.org/downloads/range/last-month/${name}`)
+      await fetch(`https://api.npmjs.org/downloads/range/last-week/${name}`)
     ).json();
+
+    await new Promise((r) => setTimeout(r, 200)); // to avoid rate limiting
 
     return downloads.reduce((a, { downloads: d }) => d + a, 0);
   }));
