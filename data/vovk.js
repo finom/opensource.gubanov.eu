@@ -38,7 +38,7 @@ export default [{
   name: 'vovk-apis',
   githubLink: 'https://github.com/finom/vovk/tree/main/packages/vovk-apis',
   description: 'Alternative clients for most common APIs.',
-  tags: ['highlight', 'node'],
+  tags: ['node'],
   npm: 'vovk-apis',
 }, {
   name: 'vovk-cli',
@@ -68,7 +68,7 @@ export default [{
   name: 'vovk-init',
   githubLink: 'https://github.com/finom/vovk/tree/main/packages/vovk-init',
   description: 'A setup wizard for a Vovk.ts project. Updates tsconfig.json with experimentalDecorators, updates NPM scripts, creates config file and installs the necessary dependencies.',
-  tags: ['highlight', 'node'],
+  tags: ['node'],
   npm: 'vovk-init',
 }, {
   name: 'vovk-examples',
@@ -95,42 +95,8 @@ export default [{
   description: 'A "Hello World" example using Vovk.ts. Demonstrates a JSON endpoint, a JSONLines endpoint, OpenAPI spec generation, publishing to NPM/PyPi/Crates, etc.',
   tags: ['highlight', 'website'],
 }, {
-  name: 'vovk-kanban-demo',
+  name: 'realtime-kanban',
   link: 'https://kanban.vovk.dev',
   description: 'A Kanban board demo using Vovk.ts with AI capabilities, such as function calling, real-time UI etc.',
   tags: ['highlight', 'website'],
 }];
-
-/*
-vovk-ajv
-fix: BREAKING rename generatorConfig config key to outputConfig
-yesterday
-vovk-apis
-fix: BREAKING rename generatorConfig config key to outputConfig
-yesterday
-vovk-cli
-fix: BREAKING rename generatorConfig config key to outputConfig
-yesterday
-vovk-client
-doc: Update READMEs
-last week
-vovk-dto
-fix: BREAKING rename generatorConfig config key to outputConfig
-yesterday
-vovk-init
-doc: Update READMEs
-last week
-vovk-python
-fix: BREAKING rename generatorConfig config key to outputConfig
-yesterday
-vovk-rust
-fix: BREAKING rename generatorConfig config key to outputConfig
-yesterday
-vovk-yup
-feat: BREAKING make bundle library-agnostic
-3 days ago
-vovk-zod
-feat: BREAKING make bundle library-agnostic
-3 days ago
-vovk
-*/
