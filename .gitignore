@@ -2,3 +2,4 @@ node_modules
 .directory
 *.log
 dist
+config.bat
