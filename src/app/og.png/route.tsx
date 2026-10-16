@@ -27,14 +27,16 @@ const Star = () => (
   </svg>
 );
 
-const Arrow = () => (
+// Lucide's "download" icon (ISC license), as on the page.
+const Download = () => (
   <svg width={30} height={30} viewBox="0 0 24 24" aria-hidden="true">
     <path
       fill="none"
       stroke="#000"
       strokeWidth="2.6"
       strokeLinecap="round"
-      d="M12 3v15M5.5 12l6.5 6.5 6.5-6.5M5 21.5h14"
+      strokeLinejoin="round"
+      d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
     />
   </svg>
 );
@@ -72,7 +74,7 @@ export async function GET() {
           </div>
           <div style={{ fontSize: 22, color: "#9b9ba2", marginTop: 4 }}>GitHub stars</div>
           <div style={{ display: "flex", alignItems: "center", fontSize: 44, fontWeight: 900, marginTop: 30 }}>
-            <Arrow />
+            <Download />
             <span style={{ marginLeft: 12 }}>{formatNumber(stats.totalDownloads)}</span>
           </div>
           <div style={{ fontSize: 22, color: "#9b9ba2", marginTop: 4 }}>npm installs a week</div>

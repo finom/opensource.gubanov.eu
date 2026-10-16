@@ -9,7 +9,8 @@ import { getStats } from "@/lib/stats";
 export async function generateMetadata(): Promise<Metadata> {
   const { totalStars, totalDownloads } = await getStats();
   // LinkedIn and others cache an image by its URL; a new URL for new numbers makes them fetch it again.
-  const image = `/og.png?v=${totalStars}-${totalDownloads}`;
+  // Bump the first part when the image's design changes.
+  const image = `/og.png?v=2-${totalStars}-${totalDownloads}`;
   return {
     metadataBase: new URL(site.url),
     title: site.title,

@@ -1,3 +1,4 @@
+import { DownloadIcon } from "@/components/DownloadIcon";
 import type { Project } from "@/data/projects";
 import { type Tag, tags } from "@/data/tags";
 import { formatNumber, type Stats } from "@/lib/stats";
@@ -50,6 +51,7 @@ export function Tile({ project, stats }: { project: Project; stats: Stats }) {
         )}
         {downloads !== undefined && (
           <span className="count downloads" title="npm installs over the past week">
+            <DownloadIcon />
             {formatNumber(downloads)}
           </span>
         )}

@@ -1,3 +1,4 @@
+import { DownloadIcon } from "@/components/DownloadIcon";
 import { Filters, filterCss } from "@/components/Filters";
 import { Tile } from "@/components/Tile";
 import { sections } from "@/data/projects";
@@ -50,7 +51,10 @@ export default async function Home() {
         <dl className="totals">
           <div>
             <dt>npm installs over the past week</dt>
-            <dd>⬇ {formatNumber(stats.totalDownloads)}</dd>
+            <dd>
+              <DownloadIcon />
+              {formatNumber(stats.totalDownloads)}
+            </dd>
           </div>
           <div>
             <dt>GitHub stars in total</dt>

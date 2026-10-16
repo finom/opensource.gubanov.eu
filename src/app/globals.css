@@ -309,18 +309,17 @@ h2 a:hover {
   font-weight: 700;
 }
 
-.count::before {
+.count.stars::before {
+  content: "★";
   display: inline-block;
   margin-right: 4px;
 }
 
-.count.stars::before {
-  content: "★";
-}
-
-.count.downloads::before {
-  content: "⬇";
-  font-weight: 400;
+.download-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+  vertical-align: -0.1em;
 }
 
 /* Footer */
