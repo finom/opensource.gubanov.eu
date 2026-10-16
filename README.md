@@ -1,3 +1,12 @@
-# opensource.gubanov.eu [![Build Status](https://travis-ci.org/finom/opensource.gubanov.eu.svg?branch=master)](https://travis-ci.org/finom/opensource.gubanov.eu)
+# opensource.gubanov.eu
 
-The website built automatically on Travis CI using [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) and [react-dom/server](https://facebook.github.io/react/docs/react-dom-server.html). The deployment to Github Pages is made using [deploy-to-git](https://github.com/finom/deploy-to-git).
+The list of open source projects by Andrey Gubanov: https://opensource.gubanov.eu
+
+A static Next.js site on GitHub Pages. The projects are in `src/data/projects.tsx`. GitHub stars and weekly npm installs are read at build time, and the `Deploy` workflow rebuilds the page every day.
+
+```sh
+npm install
+npm run dev
+```
+
+`npm run build` writes the site to `out/`. Set `GITHUB_TOKEN` to avoid GitHub's rate limit for anonymous requests. The gates are `npm run typecheck` and `npm run lint`.
