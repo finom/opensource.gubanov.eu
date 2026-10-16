@@ -10,14 +10,7 @@ const size = { width: 1200, height: 630 };
 const font = (weight: number) =>
   readFile(join(process.cwd(), `node_modules/@fontsource/raleway/files/raleway-latin-${weight}-normal.woff`));
 
-const maintained = ["Vovk.ts", "uicast", "Matreshka.js", "standard-tool"];
-const dots = [
-  ["#9ce326", "Node.js"],
-  ["#f1e05a", "Browser"],
-  ["#178600", "CLI Tool"],
-  ["#f34b7d", "Website"],
-  ["#8d75c8", "Documentation"],
-];
+const maintained = ["Vovk.ts", "uicast", "standard-tool"];
 
 const Heart = ({ size }: { size: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
@@ -85,7 +78,7 @@ export async function GET() {
           <div style={{ fontSize: 22, color: "#9b9ba2", marginTop: 4 }}>npm installs a week</div>
         </div>
       </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ display: "flex", alignItems: "center", fontSize: 34, fontWeight: 900, color: "#2e83e5" }}>
           {maintained.map((name) => (
             <div key={name} style={{ display: "flex", alignItems: "center", marginRight: 40 }}>
@@ -94,15 +87,7 @@ export async function GET() {
             </div>
           ))}
         </div>
-        <div style={{ display: "flex", alignItems: "center", fontSize: 22, marginTop: 24 }}>
-          {dots.map(([color, label]) => (
-            <div key={label} style={{ display: "flex", alignItems: "center", marginRight: 34 }}>
-              <div style={{ width: 16, height: 16, borderRadius: 8, background: color, marginRight: 9 }} />
-              {label}
-            </div>
-          ))}
-          <div style={{ display: "flex", marginLeft: "auto", color: "#9b9b9b" }}>opensource.gubanov.eu</div>
-        </div>
+        <div style={{ display: "flex", fontSize: 22, color: "#9b9b9b" }}>opensource.gubanov.eu</div>
       </div>
     </div>,
     {
