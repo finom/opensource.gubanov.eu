@@ -6,7 +6,7 @@ export default [{
 }, {
   name: 'defi-router',
   githubLink: 'https://github.com/finom/defi/tree/master/packages/router',
-  description: 'A router library for defi.js (hard-forked from Seemple.js). The library turns on two-way data binding between object properties and parts of a URL.',
+  description: 'A router library for defi.js (hard-forked from Matreshka.js). The library turns on two-way data binding between object properties and parts of a URL.',
   npm: 'defi-router',
   tags: ['browser'],
 }, {

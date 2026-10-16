@@ -72,11 +72,11 @@ const Index = () => (
         />
 
         <Section
-          items={data.seemple}
-          title="Seemple.js"
+          items={data.matreshka}
+          title="Matreshka.js"
           description={(
             <>
-              Seemple.js (formerly called Matreshka.js) is a reactive JavaScript framework, inspired by Backbone.
+              Matreshka.js is a reactive JavaScript framework, inspired by Backbone.
             </>
         )}
         />
@@ -86,7 +86,7 @@ const Index = () => (
           title="defi.js"
           description={(
             <>
-              This is a hard-fork of Seemple.js where all framework-ish features were removed.
+              This is a hard-fork of Matreshka.js where all framework-ish features were removed.
             </>
         )}
         />
