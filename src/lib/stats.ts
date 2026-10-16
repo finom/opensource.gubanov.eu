@@ -56,14 +56,25 @@ async function getDownloads(packages: string[]) {
   return downloads;
 }
 
+// Every package ever published from the account, forks and deprecated ones included.
+// The npm search API misses some of them; this list doesn't.
+async function getPublished() {
+  const packages = Object.keys(
+    await getJson<Record<string, string>>("https://registry.npmjs.org/-/user/finom/package"),
+  );
+  if (!packages.length) throw new Error("npm lists no packages for finom");
+  return packages;
+}
+
 async function loadStats(): Promise<Stats> {
   const projects = sections.flatMap((section) => section.projects);
-  const packages = [...new Set(projects.flatMap(({ npm }) => (npm ? [npm] : [])))];
-  const [ownRepos, circlecellRepos, downloads] = await Promise.all([
+  const listed = projects.flatMap(({ npm }) => (npm ? [npm] : []));
+  const [ownRepos, circlecellRepos, published] = await Promise.all([
     getRepos("users/finom/repos"),
     getRepos("orgs/circlecell/repos"),
-    getDownloads(packages),
+    getPublished(),
   ]);
+  const downloads = await getDownloads([...new Set([...published, ...listed])]);
 
   const stars: Record<string, number> = {};
   for (const repo of [...ownRepos, ...circlecellRepos]) stars[repo.full_name.toLowerCase()] = repo.stargazers_count;
@@ -75,7 +86,7 @@ async function loadStats(): Promise<Stats> {
     stars,
     downloads,
     totalStars: ownRepos.filter(({ fork }) => !fork).reduce((sum, repo) => sum + repo.stargazers_count, 0),
-    totalDownloads: Object.values(downloads).reduce((sum, count) => sum + count, 0),
+    totalDownloads: published.reduce((sum, name) => sum + downloads[name], 0),
     date: new Date().toISOString().slice(0, 10),
   };
 }
