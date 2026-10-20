@@ -230,6 +230,15 @@ export const sections: Section[] = [
         tags: ["highlight", "node", "website"],
       },
       {
+        name: "vanillatree",
+        repo: "finom/vanillatree",
+        npm: "vanillatree",
+        link: "https://finom.github.io/vanillatree/",
+        description:
+          "A tree view with no dependencies: one small script, keyboard and screen reader support, IE 10 and up.",
+        tags: ["highlight", "browser"],
+      },
+      {
         name: "tsimmes",
         repo: "finom/tsimmes",
         npm: "tsimmes",
@@ -389,13 +398,6 @@ export const sections: Section[] = [
         npm: "eslint-plugin-output-todo-comments",
         description: "An ESLint rule that reports warning comments and shows them as they are.",
         tags: ["node"],
-      },
-      {
-        name: "vanillatree",
-        repo: "finom/vanillatree",
-        npm: "vanillatree",
-        description: "A vanilla JS replacement for jstree: tree views of any depth without jQuery.",
-        tags: ["browser"],
       },
       {
         name: "donut.js",
